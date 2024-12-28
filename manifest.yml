@@ -1,0 +1,12 @@
+---
+applications:
+  - name: 27junyoung
+    host: 27junyoung
+#    domain: spring-hana.cfapps.ap12.hana.ondemand.com
+    path: target/27junyoung-1.0.0-SNAPSHOT.jar
+    memory: 1G
+    buildpacks:
+      - java_buildpack
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: "{ jre: { version: 17.+ }}"
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: "{enabled: false}"
