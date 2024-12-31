@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "avian-voice-446312-v2",
+  "private_key_id": "455d57fba141f26503858d03bd68022b54870c45",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7yv/dM9totm89\n8Tgt9inBUsv1SGfnb9PYwckLNWPtOMuNCLJcDh7ZWnaQuIOp9VJ6Fz0fAFoo9l5u\nL2aG1bvbdWHkmSl5OzI41sw5djHiqmf9F/4v06VHmyBVk7m7OMvO2wraQa6moejq\ntYR9taHwnM4jO+GNGT196MWqTnEHBvMbxigHV172GxKsdrPyM1LPZAs6z0K4U1oN\nszExPNLvZsgb6qIo7Vt74tRUXhsJzXD2COnToo0t8q/hmUNXGEoOMI333TMcQ2VO\nyk3dPatTA0IIupJVLeaMoN+kY22wgVR6emjH+VHz6OrHDIFHubOwKuaZbNAAeUnn\npS6MCngjAgMBAAECggEAV/ASaqIa72jmpKntddBc8zNzYNPcHAtIt6rfGwmQVoiP\nAOb+po7SMVPkS5aryQ2g5p01OOwwTBg6VfyKVT+G7ZiFE8gJHMT0mpszHQFVEOBd\nO65dkEXakrJ4rLo1cg+BmMcHyPaS82LEMAx6E2fXglXbTbJ/x1P3cJts3HhJA1GX\nW9NmeiWnSpn/JSahonLXbYkLdU2gmo9Gb/RCOV5qORYcA45AswfzrbHON02p8LCk\nvbMdTDHe9g/n3Z5NTIYlUCkrtyOB3+yg0FA4BLy/IfLAWwue5g50Q+dMIFKOEQm1\nfSOjO3esz0TXzYzGfp5r/XgukWkK5GOCdx4ZQ7/0SQKBgQDh0abBEnOvi23MBm0A\nC7j8uZIAtK0BhqnmSUyzS6Wal6QbeWxG8m29QqoZB6NehCrUJqWnG72CiGx+Ih+J\nEw7cI68Gq5cxalmDH0G2l6LMZKEZbf13020Puj6b+HQ5YhasatE55eUgdyzCz72f\nnngKOESl0Z1cMT/yu5psKyTsXQKBgQDU5EwC5qyIxGo+Z9xAFTAN02qLiNo9uOY/\nNlWj1HOQAIlMiD+KcQby3sa76GM0UsMokKAnyeDLWZT+Qh9jGrD/89g99oj7gHWi\nlI9rhzK3gJT5WaGrAV7rxfd00OhegrilwHRzqxdAnqFjB9yXPblCzIqvchGZle3y\n8M+WizqufwKBgFtWfWhimkBK2SJJBxWZqD0wogl/CusvGNF4nHl5A4bABzTFrDIW\nJKUEreBp4n58XwZoi2BILCL8I0Xxb2f2OXB5TnYYOZNXPNV4cw/zzXl2ymKKxpcN\nAXP3FRPpLrl3H0yl9/K/NionigdSF5TUeCFKGRoo6sk7cm4vy4os+UZRAoGAVlsk\n2ihn5DKIRjgrB3OQwor3tRIWNONDwnBv3LzZA5i0GO9LlwSyJOJpCuABHcBUmafQ\nz1L8dIAqB9kakkDJe4mWNcxDVIGPNhu88Ykt8XGe/GZ3Rb6QmmL7Nc9n8q5j6Bhh\nJGpKTFQMcvdFa7QF6iq+Nty2du5yTxGPoylm7FECgYEAw2vfhyhSST1fCdqUm3Dk\nxhy1R8JQseFIlRjlXNvGqOLAF2ThVS2x9xeZqbnwD6XozwZRjbvm1j4amOrBacWh\nAmdu8IPfscFrBUhfe2Tu2Tlvi0o94zlx8/r7Lpgmza1XxjTSJ2+bhgFKH3wMG07r\nowOdhnffxRqpmws1NWfj0iE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "google-spreed-sheet@avian-voice-446312-v2.iam.gserviceaccount.com",
+  "client_id": "113422921532737942210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/google-spreed-sheet%40avian-voice-446312-v2.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
