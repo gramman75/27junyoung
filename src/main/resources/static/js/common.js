@@ -30,7 +30,7 @@ function coordinateFormatter(value, row){
 
     let coordinate = value.split(",");
     
-
+    return  `<a class="btn btn-primary" href="/detail.html?id=${row.id}" role="button">Detail</a>`;
     return  `<button class="btn btn-info" onclick="changeMap(${coordinate[0]},${coordinate[1]},'${row.name}')">Map</button>`;
 
     // return  `<button onclick="window.open(\'/map.html?lat=${coordinate[0]}&lng=${coordinate[1]}&title=${row.name}\')">Map</button>`
