@@ -1,7 +1,7 @@
 package com.example.demo.model;
 
 public class Facility {
-    
+    private String id; 
     private String name;
     private String location;
     private String available;
@@ -11,8 +11,9 @@ public class Facility {
     private String coordinate;
 
     
-    public Facility(Object name, Object location, Object available, Object accessibility, Object fee, Object info,
+    public Facility(Object id, Object name, Object location, Object available, Object accessibility, Object fee, Object info,
             Object coordinate) {
+        this.id   = (String)id;
         this.name = (String)name;
         this.location = (String)location;
         this.available = (String)available;
@@ -21,6 +22,10 @@ public class Facility {
         this.info = (String)info;
         this.coordinate = (String)coordinate;
     }
+    public String getId(){
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -41,6 +46,10 @@ public class Facility {
     }
     public String getCoordinate() {
         return coordinate;
+    }
+
+    public void setId(Object id){
+        this.id = (String)id;
     }
     public void setName(Object name) {
         this.name = (String)name;

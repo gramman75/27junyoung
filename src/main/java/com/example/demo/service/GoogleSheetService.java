@@ -53,7 +53,7 @@ public class GoogleSheetService {
             return facilities;
             } else {
             for (List row : values) {
-                facilities.add(new Facility(row.get(0), row.get(1), row.get(2), row.get(3), row.get(4), row.get(5), row.get(6)));
+                facilities.add(new Facility(row.get(0), row.get(1), row.get(2), row.get(3), row.get(4), row.get(5), row.get(6), row.get(7)));
             }
             }
 
@@ -65,6 +65,7 @@ public class GoogleSheetService {
 
         List<Object> value = new ArrayList<>();
         
+        value.add(facility.getId());
         value.add(facility.getName());
         value.add(facility.getLocation());
         value.add(facility.getAvailable());

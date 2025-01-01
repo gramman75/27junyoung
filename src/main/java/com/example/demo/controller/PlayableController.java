@@ -42,7 +42,7 @@ public class PlayableController {
     @GetMapping("/playable")
     public ResponseEntity<List<Facility>> get(HttpServletRequest request, HttpServletResponse response) throws GeneralSecurityException, IOException {
 
-        String range = "sheet1!A2:G";
+        String range = "sheet1!A2:H";
  
         Sheets service = googleSheetService.getService();
 
@@ -61,7 +61,7 @@ public class PlayableController {
 
         Sheets service = googleSheetService.getService();
 
-        String range = "sheet1!A2:G";
+        String range = "sheet1!A2:H";
 
         try {
             ValueRange body = new ValueRange().setValues(values);
