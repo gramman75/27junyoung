@@ -39,14 +39,15 @@ public class PlayableController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass()); 
 
+    private static final String RANGE ="master!A2:H"; 
+
     @GetMapping("/playable")
     public ResponseEntity<List<Facility>> get(HttpServletRequest request, HttpServletResponse response) throws GeneralSecurityException, IOException {
 
-        String range = "sheet1!A2:H";
  
         Sheets service = googleSheetService.getService();
 
-        ValueRange sheetResponse = service.spreadsheets().values().get(SPREADSHEET_ID, range).execute();
+        ValueRange sheetResponse = service.spreadsheets().values().get(SPREADSHEET_ID, RANGE).execute();
         List<List<Object>> values = sheetResponse.getValues();
         List<Facility> convert = googleSheetService.convertToEntity(values);
         return new ResponseEntity<List<Facility>>(convert, HttpStatus.OK); 
@@ -61,11 +62,10 @@ public class PlayableController {
 
         Sheets service = googleSheetService.getService();
 
-        String range = "sheet1!A2:H";
 
         try {
             ValueRange body = new ValueRange().setValues(values);
-            result = service.spreadsheets().values().append(SPREADSHEET_ID, range, body)
+            result = service.spreadsheets().values().append(SPREADSHEET_ID, RANGE, body)
                         .setValueInputOption("USER_ENTERED")
                         .execute();
             logger.info(result.getUpdates().getUpdatedCells() + " cells appended.");

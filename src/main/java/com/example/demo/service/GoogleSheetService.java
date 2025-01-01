@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.model.Facility;
+import com.example.demo.model.Review;
 // import com. at.interceptor.common.util.GoogleSheetUtil;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
@@ -60,6 +61,19 @@ public class GoogleSheetService {
         return facilities;
     }
 
+    public List<Review> convertReviewToEntity(List<List<Object>> values){
+        List<Review> reviews = new ArrayList<>();
+        if (values == null || values.isEmpty()) {
+            return reviews;
+            } else {
+            for (List row : values) {
+                reviews.add(new Review(row.get(0), row.get(1)));
+            }
+            }
+
+        return reviews;
+    }
+
     public List<List<Object>> convertToObject(Facility facility){
         List<List<Object>> values = new ArrayList<>();
 
@@ -73,6 +87,19 @@ public class GoogleSheetService {
         value.add(facility.getFee());
         value.add(facility.getInfo());
         value.add(facility.getCoordinate());
+
+        values.add(value);
+
+        return values;
+    }
+
+    public List<List<Object>> convertReviewToObject(Review review){
+        List<List<Object>> values = new ArrayList<>();
+
+        List<Object> value = new ArrayList<>();
+        
+        value.add(review.getId());
+        value.add(review.getReview());
 
         values.add(value);
 
