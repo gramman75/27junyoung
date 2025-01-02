@@ -61,32 +61,31 @@ public class ReviewController {
         return new ResponseEntity<List<Review>>(filter, HttpStatus.OK); 
     }
 
-    // @PostMapping("/playable")
-    // public ResponseEntity<Facility> save(HttpServletRequest request, HttpServletResponse response, @RequestBody Facility facility) throws IOException, GeneralSecurityException{
+    @PostMapping("/review")
+    public ResponseEntity<Review> save(HttpServletRequest request, HttpServletResponse response, @RequestBody Review review ) throws IOException, GeneralSecurityException{
 
-    //     AppendValuesResponse result = null;
+        AppendValuesResponse result = null;
 
-    //     List<List<Object>> values = googleSheetService.convertToObject(facility);
+        List<List<Object>> values = googleSheetService.convertReviewToObject(review);
 
-    //     Sheets service = googleSheetService.getService();
+        Sheets service = googleSheetService.getService();
 
-    //     String range = "master!A2:H";
 
-    //     try {
-    //         ValueRange body = new ValueRange().setValues(values);
-    //         result = service.spreadsheets().values().append(SPREADSHEET_ID, range, body)
-    //                     .setValueInputOption("USER_ENTERED")
-    //                     .execute();
-    //         logger.info(result.getUpdates().getUpdatedCells() + " cells appended.");
-    //     } catch (GoogleJsonResponseException e) {
-    //         GoogleJsonError error = e.getDetails();
-    //         if (error.getCode() == 404) {
-    //             logger.info("Spreadsheet not found with id" );
-    //         } else {
-    //             throw e;
-    //     }
-    // }
+        try {
+            ValueRange body = new ValueRange().setValues(values);
+            result = service.spreadsheets().values().append(SPREADSHEET_ID, RANGE, body)
+                        .setValueInputOption("USER_ENTERED")
+                        .execute();
+            logger.info(result.getUpdates().getUpdatedCells() + " cells appended.");
+        } catch (GoogleJsonResponseException e) {
+            GoogleJsonError error = e.getDetails();
+            if (error.getCode() == 404) {
+                logger.info("Spreadsheet not found with id" );
+            } else {
+                throw e;
+        }
+    }
 
-    // return new ResponseEntity<Facility>(facility, HttpStatus.OK);
-    // }
+    return new ResponseEntity<Review>(review, HttpStatus.OK);
+    }
 }

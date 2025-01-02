@@ -124,10 +124,22 @@ Bootstrap 5 HTML CSS Template
                         </div>
 
                     </div>
+                    
                 </div>
             </section>
 
-            
+            <section class="hero-section hero-slide d-flex justify-content-center align-items-center" id="section_2">
+                <div class="container">
+                    <div class="row" id="reviewDisplay">
+                        <small class="section-small-title">Happy customers.</small>
+
+                        <h2 class="mt-2 mb-4">Reviews</h2>
+                        
+                        
+                    </div>
+                </div>
+
+            </section> 
 
             
         </main>
@@ -150,7 +162,6 @@ Bootstrap 5 HTML CSS Template
                 .then((response)=>{
                     return response.json();
                 }).then((data)=>{
-                    debugger;
                     data.forEach(element => {
                        if (element["id"] == id){
                             detailData = element;
@@ -170,6 +181,33 @@ Bootstrap 5 HTML CSS Template
 
                     changeMap(coordinate[0], coordinate[1], detailData["name"]);
 
+            });
+
+            fetch('/review?id=' + id)
+                .then((response)=>{
+                    return response.json();
+                }).then((data)=>{
+                    if (data.length == 0) {
+                        var review = `<div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <p class="card-text align-middle">No Reviews</p>
+                                </div>
+                            </div>`;
+
+                            $("#reviewDisplay").append(review);
+                    } else {
+                        data.forEach(element => {
+                            var review = `<div class="card" style="width: 18rem;">
+                                <div class="card-body">
+                                    <p class="card-text align-middle">${element["review"]}</p>
+                                </div>
+                            </div>`;
+
+                            $("#reviewDisplay").appendTo(review);
+                        });
+
+                    }
+                    
             });
 
             const form = document.getElementById('reviewForm');
